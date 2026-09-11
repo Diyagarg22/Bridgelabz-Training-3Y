@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #e5e5e5;
+            font-family: Georgia, serif;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+        }
+
+        h1 {
+            column-span: all;
+            text-align: center;
+            font-size: 45px;
+            border-bottom: 3px solid #222;
+            padding-bottom: 20px;
+        }
+
+        .content {
+            column-count: 3;
+            column-gap: 40px;
+            text-align: justify;
+        }
+
+        .content img {
+            width: 200px;
+            float: left;
+            margin: 0 15px 10px 0;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        @media (max-width: 700px) {
+            .content {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .content {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <h1>The Daily Chronicle</h1>
+
+    <div class="content">
+
+        <img src="https://picsum.photos/200/200">
+
+        <p>
+            Technology continues to influence modern society in many different
+            ways. People use digital tools for education, communication,
+            entertainment and business.
+        </p>
+
+        <p>
+            The development of the internet has made it easier for people
+            around the world to communicate and share information.
+        </p>
+
+        <p>
+            Education is also changing rapidly. Online platforms allow
+            students to learn from experts and access educational resources
+            from anywhere.
+        </p>
+
+        <p>
+            Businesses are adopting new technologies to improve productivity
+            and provide better services to their customers.
+        </p>
+
+        <p>
+            As technology continues to develop, people must learn new skills
+            and adapt to changing environments.
+        </p>
+
+    </div>
+
+</main>
+
+</body>
+</html>

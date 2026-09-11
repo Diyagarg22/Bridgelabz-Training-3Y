@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        .dashboard {
+            min-height: 100vh;
+
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr;
+            gap: 15px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background: #222;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        aside {
+            background: #eee;
+            padding: 30px;
+        }
+
+        aside p {
+            margin: 20px 0;
+        }
+
+        main {
+            padding: 30px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            min-height: 150px;
+            background: #ddd;
+            padding: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px gray;
+        }
+
+        .box:first-child {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 700px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            header {
+                grid-column: 1;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .box:first-child {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+
+    <aside>
+        <h3>Navigation</h3>
+        <p>Home</p>
+        <p>Profile</p>
+        <p>Settings</p>
+        <p>Logout</p>
+    </aside>
+
+    <main>
+        <div class="box">Statistics</div>
+        <div class="box">Users</div>
+        <div class="box">Orders</div>
+        <div class="box">Revenue</div>
+    </main>
+
+</div>
+
+</body>
+</html>

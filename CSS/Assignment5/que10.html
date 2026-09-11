@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(20, 30, 50, 0.95);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("https://picsum.photos/1600/900");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+        }
+
+        /* About */
+        .about {
+            padding: 70px 10%;
+            border: 3px solid #ddd;
+            outline: 5px solid #f4f4f4;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text,
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Services */
+        .services {
+            position: relative;
+            padding: 70px 10%;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+        }
+
+        .services h2 {
+            text-align: center;
+        }
+
+        .service-container {
+            display: flex;
+            gap: 25px;
+        }
+
+        .service {
+            flex: 1;
+            padding: 30px;
+            margin: 10px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Contact */
+        .contact {
+            padding: 70px 10%;
+            background: #172033;
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid white;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px 30px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Fixed button */
+        .top-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            .about-content,
+            .service-container {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>My Website</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Welcome to My Website</h1>
+        <p>Creative • Modern • Responsive</p>
+    </div>
+</section>
+
+<section class="about" id="about">
+
+    <h2>About Us</h2>
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <p>
+                We create modern and responsive websites using HTML and CSS.
+                Our goal is to build clean and user-friendly web experiences.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="https://picsum.photos/500/300" alt="About">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="services" id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+        <div class="service">
+            <h3>Web Design</h3>
+            <p>Modern and attractive website designs.</p>
+        </div>
+
+        <div class="service">
+            <h3>Development</h3>
+            <p>Responsive websites using modern technologies.</p>
+        </div>
+
+        <div class="service">
+            <h3>Support</h3>
+            <p>Continuous maintenance and technical support.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <form>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send</button>
+
+    </form>
+
+</section>
+
+<a href="#home" class="top-button">↑</a>
+
+<footer>
+    <p>&copy; 2026 My Website. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

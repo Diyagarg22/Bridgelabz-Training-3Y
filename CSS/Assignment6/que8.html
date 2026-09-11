@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        figure {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        figcaption {
+            text-align: center;
+            padding: 10px;
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Photo Gallery</h1>
+
+<div class="gallery">
+
+    <figure>
+        <img src="https://picsum.photos/id/1015/400/300">
+        <figcaption>Mountain</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://picsum.photos/id/1016/400/300">
+        <figcaption>Nature</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://picsum.photos/id/1018/400/300">
+        <figcaption>Landscape</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://picsum.photos/id/1020/400/300">
+        <figcaption>Forest</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://picsum.photos/id/1024/400/300">
+        <figcaption>Animal</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://picsum.photos/id/1035/400/300">
+        <figcaption>Lake</figcaption>
+    </figure>
+
+</div>
+
+</body>
+</html>

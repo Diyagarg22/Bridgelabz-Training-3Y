@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .team {
+            display: flex;
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .leader {
+            background: #dbeafe;
+            border: 3px solid #2563eb;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .role {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .team {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Our Team</h1>
+
+<div class="team">
+
+    <div class="card leader">
+        <h2>Diya</h2>
+        <p class="role">Team Lead</p>
+        <p>Responsible for managing the team and coordinating the project.</p>
+    </div>
+
+    <div class="card">
+        <h2>Riya</h2>
+        <p class="role">Frontend Developer</p>
+        <p>Creates responsive and attractive user interfaces.</p>
+    </div>
+
+    <div class="card">
+        <h2>Neha</h2>
+        <p class="role">Backend Developer</p>
+        <p>Works on server-side logic and database management.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

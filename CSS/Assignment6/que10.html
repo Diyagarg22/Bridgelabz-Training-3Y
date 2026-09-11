@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 50px;
+            background: #222;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+
+            padding: 40px;
+        }
+
+        article {
+            padding: 30px;
+        }
+
+        article h1 {
+            animation: slideUp 1s ease;
+        }
+
+        .boxes {
+            margin-top: 30px;
+
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 40px 20px;
+            background: #eee;
+            text-align: center;
+        }
+
+        aside {
+            background: #eee;
+            padding: 30px;
+        }
+
+        footer {
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+            background: #222;
+            color: white;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h2>MyWebsite</h2>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <article>
+
+        <h1>Welcome to My Website</h1>
+
+        <p>
+            This is my responsive webpage created using
+            both CSS Grid and Flexbox.
+        </p>
+
+        <div class="boxes">
+
+            <div class="box">
+                <h3>HTML</h3>
+                <p>Structure</p>
+            </div>
+
+            <div class="box">
+                <h3>CSS</h3>
+                <p>Styling</p>
+            </div>
+
+            <div class="box">
+                <h3>JavaScript</h3>
+                <p>Behaviour</p>
+            </div>
+
+        </div>
+
+    </article>
+
+    <aside>
+        <h2>Sidebar</h2>
+        <p>Latest updates</p>
+        <p>Useful links</p>
+    </aside>
+
+</main>
+
+<footer>
+    © 2026 My Website
+</footer>
+
+</body>
+</html>
