@@ -1,0 +1,343 @@
+```css
+/* =========================================
+   CSS ANIMATION SHOWCASE
+   Assignment 7
+   ========================================= */
+
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- Body ---------- */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+    color: #1e293b;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------- Header ---------- */
+
+.header {
+    background: #111827;
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #cbd5e1;
+}
+
+
+/* ---------- Main ---------- */
+
+main {
+    flex: 1;
+}
+
+.animation-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+}
+
+
+/* ---------- Section Heading ---------- */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.tag {
+    display: inline-block;
+
+    background: #e0e7ff;
+    color: #4338ca;
+
+    padding: 7px 14px;
+
+    border-radius: 50px;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- Flexbox ---------- */
+
+.animation-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ---------- Cards ---------- */
+
+.animation-card {
+    width: 230px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.animation-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+
+/* ---------- Animation Area ---------- */
+
+.animation-area {
+    height: 180px;
+
+    background: #f8fafc;
+
+    border-radius: 14px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ---------- Common Animated Box ---------- */
+
+.animated-box {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   1. MOVING ANIMATION
+   ========================================= */
+
+.move-box {
+    background: #4f46e5;
+
+    animation: moveBox 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveBox {
+
+    from {
+        transform: translateX(-55px);
+    }
+
+    to {
+        transform: translateX(55px);
+    }
+}
+
+
+/* =========================================
+   2. ROTATING ANIMATION
+   ========================================= */
+
+.rotate-box {
+    background: #0891b2;
+
+    animation: rotateBox 2s linear infinite;
+}
+
+@keyframes rotateBox {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   3. BOUNCING ANIMATION
+   ========================================= */
+
+.bounce-box {
+    background: #059669;
+
+    animation: bounceBox 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes bounceBox {
+
+    from {
+        transform: translateY(35px);
+    }
+
+    to {
+        transform: translateY(-35px);
+    }
+}
+
+
+/* =========================================
+   4. PULSE ANIMATION
+   ========================================= */
+
+.pulse-box {
+    background: #d97706;
+
+    animation: pulseBox 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseBox {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ---------- Card Text ---------- */
+
+.animation-card h3 {
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
+}
+
+.animation-card p {
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+    background: #111827;
+
+    color: #cbd5e1;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .animation-section {
+        padding: 50px 20px;
+    }
+
+    .animation-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .animation-card {
+        width: 280px;
+    }
+}
+```

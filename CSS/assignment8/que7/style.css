@@ -1,0 +1,394 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    color: #222;
+
+    /* Soft background gradient */
+    background: linear-gradient(
+        135deg,
+        #e3f2fd,
+        #f3e5f5
+    );
+
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    text-align: center;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* ========================================
+   Main Section
+   ======================================== */
+
+main {
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ========================================
+   UI Card
+   ======================================== */
+
+.ui-card {
+    width: 100%;
+
+    max-width: 600px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.ui-card h2 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #263238;
+
+    font-size: 30px;
+}
+
+.description {
+    margin: 0;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+/* ========================================
+   Search Section
+   ======================================== */
+
+.search-section,
+.dropdown-section {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+
+    color: #37474f;
+}
+
+
+/* ========================================
+   Search Box
+   ======================================== */
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 12px 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Search input focus */
+
+.search-box input:focus {
+    border-color: #1976d2;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+
+/* ========================================
+   Search Button
+   ======================================== */
+
+.search-btn {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #1976d2;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Search button hover */
+
+.search-btn:hover {
+    background-color: #0d47a1;
+
+    transform: translateY(-2px);
+}
+
+
+/* Search button active */
+
+.search-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================================
+   Dropdown
+   ======================================== */
+
+select {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Dropdown focus */
+
+select:focus {
+    border-color: #7b1fa2;
+
+    box-shadow:
+        0 0 0 3px rgba(123, 31, 162, 0.15);
+}
+
+
+/* Dropdown hover */
+
+select:hover {
+    border-color: #7b1fa2;
+}
+
+
+/* ========================================
+   Button Section
+   ======================================== */
+
+.button-section {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   Common Button Styling
+   ======================================== */
+
+.btn {
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+}
+
+
+/* ========================================
+   Primary Button
+   ======================================== */
+
+.primary-btn {
+    border: 2px solid #1976d2;
+
+    background-color: #1976d2;
+
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0d47a1;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(25, 118, 210, 0.3);
+}
+
+
+/* ========================================
+   Secondary Button
+   ======================================== */
+
+.secondary-btn {
+    border: 2px solid #43a047;
+
+    background-color: #43a047;
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #2e7d32;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(67, 160, 71, 0.3);
+}
+
+
+/* ========================================
+   Outline Button
+   ======================================== */
+
+.outline-btn {
+    border: 2px solid #7b1fa2;
+
+    background-color: white;
+
+    color: #7b1fa2;
+}
+
+.outline-btn:hover {
+    background-color: #7b1fa2;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    text-align: center;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 15px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .ui-card {
+        padding: 25px 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .button-section {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

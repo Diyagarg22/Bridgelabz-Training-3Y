@@ -1,0 +1,307 @@
+```css
+/* --------------------------------
+   Universal Styling
+----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f1f5f9;
+
+    color: #1e293b;
+
+    line-height: 1.6;
+}
+
+
+/* --------------------------------
+   Header
+----------------------------------- */
+
+.header {
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background-color: #0f172a;
+
+    color: white;
+}
+
+.header h1 {
+    font-size: 38px;
+
+    /*
+       Text shadow adds depth to
+       the heading text.
+    */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #cbd5e1;
+}
+
+
+/* --------------------------------
+   Main Section
+----------------------------------- */
+
+.cards-section {
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    padding: 0 25px;
+
+    text-align: center;
+}
+
+.cards-section h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #64748b;
+
+    margin-bottom: 40px;
+}
+
+
+/* --------------------------------
+   Cards Container
+----------------------------------- */
+
+/*
+   Flexbox arranges the cards
+   in a single horizontal row.
+*/
+
+.cards-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* --------------------------------
+   Common Card Styling
+----------------------------------- */
+
+.card {
+    width: 300px;
+
+    min-height: 350px;
+
+    padding: 35px 25px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    /*
+       Transition makes the hover
+       animation smooth.
+    */
+    transition: all 0.4s ease;
+
+    cursor: pointer;
+}
+
+
+/* --------------------------------
+   Card Icon
+----------------------------------- */
+
+.icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background-color: #e2e8f0;
+
+    font-weight: bold;
+
+    color: #334155;
+}
+
+
+/* --------------------------------
+   Card Heading
+----------------------------------- */
+
+.card h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    /*
+       Text shadow creates depth
+       on each card heading.
+    */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+/* --------------------------------
+   Card Paragraph
+----------------------------------- */
+
+.card p {
+    color: #64748b;
+
+    margin-bottom: 20px;
+}
+
+
+/* --------------------------------
+   Card Label
+----------------------------------- */
+
+.card span {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #475569;
+}
+
+
+/* --------------------------------
+   Shadow Style 1
+----------------------------------- */
+
+/*
+   Small blur and low opacity
+   create a soft shadow.
+*/
+
+.shadow-one {
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* --------------------------------
+   Shadow Style 2
+----------------------------------- */
+
+/*
+   Larger vertical offset and
+   blur create stronger depth.
+*/
+
+.shadow-two {
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* --------------------------------
+   Shadow Style 3
+----------------------------------- */
+
+/*
+   Multiple shadows create
+   a layered visual effect.
+*/
+
+.shadow-three {
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.10),
+        0 15px 30px rgba(0, 0, 0, 0.12),
+        0 25px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* --------------------------------
+   Hover Effect
+----------------------------------- */
+
+/*
+   The card moves upward and
+   receives a larger shadow.
+*/
+
+.card:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.20);
+}
+
+
+/* --------------------------------
+   Footer
+----------------------------------- */
+
+.footer {
+    text-align: center;
+
+    margin-top: 60px;
+
+    padding: 20px;
+
+    background-color: #0f172a;
+
+    color: white;
+}
+
+
+/* --------------------------------
+   Responsive Design
+----------------------------------- */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+
+        max-width: 350px;
+    }
+}
+```

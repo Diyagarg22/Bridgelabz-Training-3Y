@@ -1,0 +1,319 @@
+```css
+/* --------------------------------
+   Universal Styling
+----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* --------------------------------
+   Fixed Header
+----------------------------------- */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: rgba(15, 23, 42, 0.95);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+
+/* Navigation */
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #a5b4fc;
+}
+
+
+/* --------------------------------
+   Common Gradient Section
+----------------------------------- */
+
+.gradient-section {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 25px 80px;
+}
+
+
+/* --------------------------------
+   Linear Gradient Section
+----------------------------------- */
+
+/*
+   Linear gradient moves colors
+   along a straight line.
+*/
+
+.linear-section {
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+
+/* --------------------------------
+   Radial Gradient Section
+----------------------------------- */
+
+/*
+   Radial gradient starts from
+   a central point and spreads outward.
+*/
+
+.radial-section {
+
+    background: radial-gradient(
+        circle at center,
+        #f97316,
+        #db2777 45%,
+        #581c87
+    );
+
+    /*
+       The background remains fixed
+       relative to the viewport while
+       the page content scrolls.
+    */
+    background-attachment: fixed;
+}
+
+
+/* --------------------------------
+   Content Card
+----------------------------------- */
+
+.content-card {
+
+    width: min(700px, 90%);
+
+    padding: 50px;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Number label */
+
+.label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 6px 14px;
+
+    border-radius: 50px;
+
+    background-color: rgba(255, 255, 255, 0.18);
+
+    font-size: 13px;
+}
+
+
+/* Heading */
+
+.content-card h2 {
+    font-size: 42px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Description */
+
+.content-card p {
+    max-width: 550px;
+
+    margin: 0 auto 25px;
+
+    color: #f1f5f9;
+
+    font-size: 17px;
+}
+
+
+/* --------------------------------
+   Code Example
+----------------------------------- */
+
+.code-example {
+
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    font-family: monospace;
+
+    font-size: 14px;
+}
+
+
+/* --------------------------------
+   Information Section
+----------------------------------- */
+
+.info-section {
+
+    min-height: 50vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background-color: #0f172a;
+}
+
+.info-section h2 {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.info-section p {
+    max-width: 600px;
+
+    color: #cbd5e1;
+}
+
+
+/* --------------------------------
+   Fixed Footer
+----------------------------------- */
+
+.footer {
+
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background-color: rgba(15, 23, 42, 0.95);
+
+    font-size: 13px;
+
+    z-index: 1000;
+}
+
+
+/* --------------------------------
+   Responsive Design
+----------------------------------- */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .header nav {
+        gap: 12px;
+    }
+
+    .header nav a {
+        font-size: 13px;
+    }
+
+    .content-card {
+        padding: 35px 20px;
+    }
+
+    .content-card h2 {
+        font-size: 32px;
+    }
+
+    .content-card p {
+        font-size: 15px;
+    }
+
+    .code-example {
+        font-size: 11px;
+    }
+}
+```

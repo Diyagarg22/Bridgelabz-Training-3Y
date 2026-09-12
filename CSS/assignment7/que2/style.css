@@ -1,0 +1,267 @@
+```css
+/* --------------------------------
+   Universal Styling
+----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* --------------------------------
+   Header
+----------------------------------- */
+
+.header {
+    text-align: center;
+    background-color: #172554;
+    color: white;
+    padding: 35px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #dbeafe;
+}
+
+
+/* --------------------------------
+   Main Section
+----------------------------------- */
+
+.practice-section {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+.practice-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+
+/* --------------------------------
+   Flexbox Layout
+----------------------------------- */
+
+/*
+   Flexbox is used to place all
+   three boxes horizontally.
+*/
+
+.boxes {
+    min-height: 450px;
+
+    display: flex;
+
+    /* Horizontal centering */
+    justify-content: center;
+
+    /* Vertical centering */
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* --------------------------------
+   Common Box Styling
+----------------------------------- */
+
+.size-box {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.size-box:hover {
+    transform: translateY(-8px);
+}
+
+
+/* --------------------------------
+   1. PX Unit
+----------------------------------- */
+
+/*
+   px is a fixed CSS length unit.
+*/
+
+.box-px {
+    width: 220px;
+    height: 180px;
+
+    background-color: #2563eb;
+}
+
+
+/* --------------------------------
+   2. Percentage Unit
+----------------------------------- */
+
+/*
+   Percentage width is calculated
+   relative to the parent element.
+*/
+
+.box-percent {
+    width: 30%;
+    height: 200px;
+
+    background-color: #059669;
+}
+
+
+/* --------------------------------
+   3. VH and EM Units
+----------------------------------- */
+
+/*
+   vh = viewport height.
+
+   25vh means 25% of the viewport height.
+*/
+
+.box-vh {
+    width: 250px;
+    height: 25vh;
+
+    /*
+       em is relative to the element's
+       font size for properties such as padding.
+    */
+    padding: 2em;
+
+    background-color: #9333ea;
+}
+
+
+/* --------------------------------
+   Special Box
+----------------------------------- */
+
+.special-box {
+    width: 90%;
+
+    /*
+       max-width prevents the box
+       from becoming wider than 650px.
+    */
+    max-width: 650px;
+
+    /*
+       min-height guarantees that
+       the box will be at least 250px tall.
+    */
+    min-height: 250px;
+
+    height: 250px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    background-color: #ffffff;
+
+    border: 3px solid #475569;
+
+    border-radius: 15px;
+
+    /*
+       Extra content is clipped instead
+       of increasing the box height.
+    */
+    overflow: auto;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.special-box h3 {
+    margin-bottom: 15px;
+    color: #172554;
+}
+
+.special-box p {
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+
+/* --------------------------------
+   Footer
+----------------------------------- */
+
+.footer {
+    text-align: center;
+
+    background-color: #172554;
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}
+
+
+/* --------------------------------
+   Responsive Design
+----------------------------------- */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .boxes {
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .box-px,
+    .box-percent,
+    .box-vh {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .special-box {
+        width: 90%;
+    }
+}
+```

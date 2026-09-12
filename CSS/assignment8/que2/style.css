@@ -1,0 +1,203 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* ========================================
+   Main Section
+   ======================================== */
+
+main {
+    min-height: 70vh;
+
+    /* Center the tooltip examples */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ========================================
+   Tooltip Container
+   ======================================== */
+
+.tooltip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+/* ========================================
+   Individual Tooltip Box
+   ======================================== */
+
+.tooltip-box {
+    position: relative;
+}
+
+
+/* ========================================
+   Element on which tooltip appears
+   ======================================== */
+
+.tooltip-element {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background-color: #1976d2;
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Change element appearance on hover */
+
+.tooltip-element:hover {
+    background-color: #0d47a1;
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   Tooltip Text
+   ======================================== */
+
+.tooltip-text {
+    position: absolute;
+
+    /* Position tooltip above the element */
+    bottom: calc(100% + 12px);
+
+    left: 50%;
+
+    /* Center tooltip horizontally */
+    transform: translateX(-50%);
+
+    width: 180px;
+
+    padding: 10px;
+
+    background-color: #212121;
+    color: white;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    /* Hide tooltip initially */
+    opacity: 0;
+
+    /* Prevent mouse interaction */
+    visibility: hidden;
+
+    /* Smooth fade-in effect */
+    transition: 0.3s ease-in-out;
+}
+
+
+/* ========================================
+   Small Arrow Below Tooltip
+   ======================================== */
+
+.tooltip-text::after {
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 6px;
+    border-style: solid;
+
+    border-color: #212121 transparent transparent transparent;
+}
+
+
+/* ========================================
+   Show Tooltip on Hover
+   ======================================== */
+
+.tooltip-box:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    text-align: center;
+
+    background-color: #263238;
+    color: white;
+
+    padding: 15px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .tooltip-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .tooltip-text {
+        width: 160px;
+    }
+}

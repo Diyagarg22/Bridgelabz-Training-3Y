@@ -1,0 +1,228 @@
+/* ========================================
+   General Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+
+/* ========================================
+   Common Section Styling
+   ======================================== */
+
+.selector-section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.selector-section h2 {
+    margin-top: 0;
+    color: #263238;
+}
+
+
+/* ========================================
+   1. Element Selector
+   Selects all elements of a type
+   ======================================== */
+
+.selector-section p {
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   2. Class Selector
+   Selects elements having a class
+   ======================================== */
+
+.highlight {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-left: 5px solid #ff9800;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   3. ID Selector
+   Selects an element with a specific ID
+   ======================================== */
+
+#special-text {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   4. Attribute Selector
+   Selects links containing href attribute
+   ======================================== */
+
+a[href] {
+    color: #1565c0;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+
+/* Attribute selector for GitHub link */
+
+a[href*="github"] {
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   5. Child Combinator >
+   Selects only direct children
+   ======================================== */
+
+.parent-box > p {
+    background-color: #dcedc8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   6. Adjacent Sibling +
+   Selects the first element immediately
+   following another element
+   ======================================== */
+
+.selector-section h3 + p {
+    background-color: #ffe0b2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   7. General Sibling ~
+   Selects all matching siblings that
+   appear after the specified element
+   ======================================== */
+
+.selector-section h3 ~ p {
+    border-left: 4px solid #1976d2;
+    padding-left: 10px;
+}
+
+
+/* ========================================
+   8. Descendant Selector
+   Selects all p elements inside
+   .descendant-box
+   ======================================== */
+
+.descendant-box p {
+    background-color: #f3e5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   9. List Styling
+   ======================================== */
+
+.skills-list {
+    padding-left: 25px;
+}
+
+
+/* Selects every li inside skills-list */
+
+.skills-list li {
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+
+/* Attribute selector for list items
+   containing specific text is not possible
+   directly, so normal class/element selectors
+   are used here. */
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 15px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 20px 12px;
+    }
+
+    .selector-section {
+        padding: 18px;
+    }
+
+    a[href] {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

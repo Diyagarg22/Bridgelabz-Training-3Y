@@ -1,0 +1,210 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* ========================================
+   Main Section
+   ======================================== */
+
+main {
+    padding: 40px 20px;
+}
+
+
+/* ========================================
+   Flexbox Layout
+   ======================================== */
+
+.examples {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* ========================================
+   Individual Example Boxes
+   ======================================== */
+
+.example-box {
+    background-color: white;
+    width: 260px;
+    min-height: 280px;
+    padding: 20px;
+    border-radius: 10px;
+
+    /* Box shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+.example-box h2 {
+    margin-top: 0;
+    color: #37474f;
+}
+
+
+/* ========================================
+   :hover Example
+   ======================================== */
+
+.example-box a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    text-decoration: none;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+
+/* Link changes when mouse is placed over it */
+
+.example-box a:hover {
+    background-color: #1565c0;
+    color: white;
+}
+
+
+/* ========================================
+   :focus Example
+   ======================================== */
+
+.example-box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+
+/* Input changes when it receives focus */
+
+.example-box input:focus {
+    border-color: #1976d2;
+    background-color: #e3f2fd;
+}
+
+
+/* ========================================
+   :active Example
+   ======================================== */
+
+.example-box button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #43a047;
+    color: white;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Button changes while being clicked */
+
+.example-box button:active {
+    background-color: #1b5e20;
+    transform: scale(0.95);
+}
+
+
+/* ========================================
+   :nth-child() Example
+   ======================================== */
+
+.number-list {
+    padding: 0;
+    list-style: none;
+}
+
+.number-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+
+/* Selects the second list item */
+
+.number-list li:nth-child(2) {
+    background-color: #ffcc80;
+    color: #5d4037;
+}
+
+
+/* Selects the fourth list item */
+
+.number-list li:nth-child(4) {
+    background-color: #ce93d8;
+    color: #4a148c;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 15px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .examples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .example-box {
+        width: 90%;
+    }
+}

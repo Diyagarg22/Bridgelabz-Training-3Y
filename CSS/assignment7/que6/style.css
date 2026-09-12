@@ -1,0 +1,264 @@
+```css
+/* =========================================
+   CSS TRANSFORMATIONS SHOWCASE
+   Assignment 6
+   ========================================= */
+
+
+/* ---------- Basic Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ---------- Body ---------- */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------- Header ---------- */
+
+.header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+
+/* ---------- Main Section ---------- */
+
+main {
+    flex: 1;
+}
+
+.transform-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+
+/* ---------- Section Heading ---------- */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tag {
+    display: inline-block;
+
+    background: #e0e7ff;
+    color: #4338ca;
+
+    padding: 7px 14px;
+    border-radius: 50px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    max-width: 600px;
+    margin: auto;
+
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* ---------- Flexbox Container ---------- */
+
+.transform-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ---------- Transformation Cards ---------- */
+
+.transform-card {
+    width: 230px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.transform-card:hover {
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+
+/* ---------- Transformation Boxes ---------- */
+
+.transform-box {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /*
+       Required transition:
+       The transformation will happen
+       smoothly in 0.4 seconds.
+    */
+    transition: all 0.4s ease;
+}
+
+
+/* ---------- Different Box Designs ---------- */
+
+.rotate-box {
+    background: #4f46e5;
+}
+
+.scale-box {
+    background: #0891b2;
+}
+
+.translate-box {
+    background: #059669;
+}
+
+.skew-box {
+    background: #d97706;
+}
+
+
+/* =========================================
+   TRANSFORMATIONS
+   ========================================= */
+
+
+/* 1. ROTATE */
+
+.rotate-box:hover {
+    transform: rotate(12deg);
+}
+
+
+/* 2. SCALE */
+
+.scale-box:hover {
+    transform: scale(1.15);
+}
+
+
+/* 3. TRANSLATE */
+
+.translate-box:hover {
+    transform: translate(15px, -15px);
+}
+
+
+/* 4. SKEW */
+
+.skew-box:hover {
+    transform: skew(10deg, 5deg);
+}
+
+
+/* ---------- Card Text ---------- */
+
+.transform-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.transform-card p {
+    color: #64748b;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+    background: #111827;
+    color: #cbd5e1;
+
+    text-align: center;
+
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .transform-section {
+        padding: 50px 20px;
+    }
+
+    .transform-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .transform-card {
+        width: 280px;
+    }
+}
+```
