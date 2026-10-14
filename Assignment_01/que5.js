@@ -1,0 +1,23 @@
+```javascript
+// Q5.js
+
+let temperature = 25;
+let isRaining = false;
+let windSpeed = 10;
+
+// Suggest an activity based on weather
+if (isRaining) {
+    console.log("Stay indoors with hot coffee.");
+} else if (temperature > 35) {
+    console.log("Go swimming.");
+} else if (temperature < 15 && windSpeed > 20) {
+    console.log("Too cold and windy — stay home.");
+} else {
+    console.log("Perfect day for a walk.");
+}
+
+// Example of combining && and ||
+if ((temperature > 35 || temperature < 15) && !isRaining) {
+    console.log("Weather is at an extreme. Plan carefully.");
+}
+```

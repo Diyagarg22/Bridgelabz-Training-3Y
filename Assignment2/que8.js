@@ -1,0 +1,45 @@
+
+ // Shopping cart
+const cart = [
+    { item: "Laptop", category: "electronics", price: 45000 },
+    { item: "Shoes", category: "fashion", price: 2500 },
+    { item: "Book", category: "education", price: 600 }
+];
+
+// Calculate original cart total
+const totalCartValue = cart.reduce(
+    (total, product) => total + product.price,
+    0
+);
+
+let discountedTotal = 0;
+
+// Apply category-based discounts
+for (let product of cart) {
+    let discount = 0;
+
+    if (product.category === "electronics") {
+        discount = 10;
+    } else if (product.category === "fashion") {
+        discount = 5;
+    }
+
+    let finalPrice = product.price -
+        (product.price * discount / 100);
+
+    discountedTotal += finalPrice;
+
+    console.log(
+        `${product.item}: Original = ${product.price}, ` +
+        `Discounted = ${finalPrice}`
+    );
+}
+
+// Apply extra discount if original cart value exceeds 50000
+if (totalCartValue > 50000) {
+    discountedTotal = discountedTotal * 0.95;
+}
+
+// Display final result
+console.log("Original Cart Total:", totalCartValue);
+console.log("Final Cart Total:", discountedTotal);
