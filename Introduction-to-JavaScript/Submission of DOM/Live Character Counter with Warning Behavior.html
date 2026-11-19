@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Counter</title>
+    <style>
+        #counter {
+            color: green;
+        }
+
+        .warning {
+            color: orange !important;
+        }
+
+        .danger {
+            color: red !important;
+        }
+    </style>
+</head>
+<body>
+    <h2>Character Counter</h2>
+
+    <textarea id="message" maxlength="100"
+        placeholder="Write something..."></textarea>
+
+    <p id="counter">100 characters remaining</p>
+    <button id="resetButton">Reset</button>
+
+    <script>
+        const message = document.getElementById("message");
+        const counter = document.getElementById("counter");
+        const resetButton = document.getElementById("resetButton");
+
+        const maxCharacters = 100;
+
+        function updateCounter() {
+            const remaining = maxCharacters - message.value.length;
+
+            counter.textContent = remaining + " characters remaining";
+
+            counter.className = "";
+
+            if (remaining <= 20 && remaining > 0) {
+                counter.classList.add("warning");
+            } else if (remaining === 0) {
+                counter.classList.add("danger");
+            }
+        }
+
+        message.addEventListener("input", updateCounter);
+
+        // Prevent typing when 100 characters are reached
+        message.addEventListener("keydown", function (event) {
+            if (
+                message.value.length >= maxCharacters &&
+                event.key.length === 1
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        // Reset textarea and counter
+        resetButton.addEventListener("click", function () {
+            message.value = "";
+            updateCounter();
+        });
+
+        updateCounter();
+    </script>
+</body>
+</html>

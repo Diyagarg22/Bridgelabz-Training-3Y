@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        body.light {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark {
+            background-color: #222;
+            color: white;
+        }
+
+        body.blue {
+            background-color: #dbeafe;
+            color: #12345a;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <h2>Theme Switcher</h2>
+    <p>Choose your preferred theme.</p>
+
+    <button onclick="changeTheme('light')">Light</button>
+    <button onclick="changeTheme('dark')">Dark</button>
+    <button onclick="changeTheme('blue')">Blue</button>
+
+    <script>
+        function changeTheme(themeName) {
+            // Apply the selected class using setAttribute()
+            document.body.setAttribute("class", themeName);
+
+            // Store the selected theme in a custom attribute
+            document.body.setAttribute("data-theme", themeName);
+        }
+    </script>
+</body>
+</html>

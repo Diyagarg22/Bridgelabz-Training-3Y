@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Gallery</h2>
+
+    <div class="gallery" id="gallery">
+        <img src="https://picsum.photos/id/10/300/200" alt="Gallery image 1">
+        <img src="https://picsum.photos/id/20/300/200" alt="Gallery image 2">
+        <img src="https://picsum.photos/id/30/300/200" alt="Gallery image 3">
+        <img src="https://picsum.photos/id/40/300/200" alt="Gallery image 4">
+        <img src="https://picsum.photos/id/50/300/200" alt="Gallery image 5">
+        <img src="https://picsum.photos/id/60/300/200" alt="Gallery image 6">
+    </div>
+
+    <div id="modal">
+        <img id="largeImage" src="" alt="Large preview">
+    </div>
+
+    <script>
+        const gallery = document.getElementById("gallery");
+        const modal = document.getElementById("modal");
+        const largeImage = document.getElementById("largeImage");
+
+        // Open modal when a gallery image is clicked
+        gallery.addEventListener("click", function (event) {
+            if (event.target.tagName === "IMG") {
+                largeImage.src = event.target.src;
+                modal.style.display = "flex";
+            }
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        // Prevent click inside the image from closing the modal
+        largeImage.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>

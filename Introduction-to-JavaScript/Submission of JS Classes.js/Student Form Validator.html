@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <style>
+        input {
+            display: block;
+            margin: 8px 0;
+            padding: 10px;
+            border: 2px solid gray;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    <form id="studentForm">
+        <input id="name" placeholder="Name">
+        <p id="nameError" class="error"></p>
+
+        <input id="email" placeholder="Email">
+        <p id="emailError" class="error"></p>
+
+        <input id="phone" placeholder="Phone">
+        <p id="phoneError" class="error"></p>
+
+        <input id="password" type="password" placeholder="Password">
+        <p id="passwordError" class="error"></p>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script src="Q2.js"></script>
+</body>
+</html>

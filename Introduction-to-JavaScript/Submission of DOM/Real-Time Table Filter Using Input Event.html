@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Table Filter</title>
+</head>
+<body>
+    <h2>Search Students</h2>
+
+    <input type="text" id="searchInput" placeholder="Search by name or branch">
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>CGPA</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable">
+            <tr>
+                <td>Rahul</td>
+                <td>CSE</td>
+                <td>8.5</td>
+            </tr>
+            <tr>
+                <td>Priya</td>
+                <td>IT</td>
+                <td>9.1</td>
+            </tr>
+            <tr>
+                <td>Aman</td>
+                <td>ECE</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>Neha</td>
+                <td>CSE</td>
+                <td>8.9</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="noResults" hidden>No results found</p>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const studentTable = document.getElementById("studentTable");
+        const noResults = document.getElementById("noResults");
+
+        searchInput.addEventListener("input", function () {
+            const searchText = searchInput.value.toLowerCase().trim();
+            const rows = studentTable.querySelectorAll("tr");
+
+            let matchingRows = 0;
+
+            rows.forEach(function (row) {
+                const rowText = row.textContent.toLowerCase();
+
+                if (rowText.includes(searchText)) {
+                    row.style.display = "";
+                    matchingRows++;
+                } else {
+                    row.style.display = "none";
+                }
+            });
+
+            // Show message if no student matches
+            noResults.hidden = matchingRows !== 0;
+        });
+    </script>
+</body>
+</html>
