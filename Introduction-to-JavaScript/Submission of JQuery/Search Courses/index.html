@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Courses</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .course {
+            padding: 12px;
+            margin: 8px;
+            border: 1px solid gray;
+        }
+
+        .matched {
+            background-color: lightyellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Search Courses</h1>
+    </header>
+
+    <main>
+        <label for="search">Search course:</label>
+        <input type="text" id="search" placeholder="Enter course name">
+        <button id="clearSearch">Clear Search</button>
+
+        <p id="count">Total courses: 5</p>
+
+        <section id="courseList">
+            <div class="course">JavaScript</div>
+            <div class="course">Python Programming</div>
+            <div class="course">Web Development</div>
+            <div class="course">Data Structures</div>
+            <div class="course">Database Management</div>
+        </section>
+    </main>
+
+    <script src="Q7.js"></script>
+</body>
+</html>

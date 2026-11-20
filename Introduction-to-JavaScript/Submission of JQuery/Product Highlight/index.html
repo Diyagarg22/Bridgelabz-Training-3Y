@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Highlight</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .product {
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid gray;
+            width: 250px;
+        }
+
+        .highlight {
+            background-color: lightyellow;
+        }
+
+        .selected {
+            border: 3px solid green;
+        }
+
+        .discounted[data-discount] {
+            color: red;
+            font-weight: bold;
+        }
+
+        .details {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+    </header>
+
+    <main>
+        <div class="product discounted" data-discount="20" data-stock="yes">
+            <h3>Laptop</h3>
+            <p>Price: ₹50000</p>
+            <p class="details">Powerful laptop with 16GB RAM.</p>
+            <button class="favorite">♥ Favorite</button>
+        </div>
+
+        <div class="product" data-stock="no">
+            <h3>Mobile</h3>
+            <p>Price: ₹20000</p>
+            <p class="details">Latest smartphone with great camera.</p>
+            <button class="favorite">♥ Favorite</button>
+        </div>
+
+        <div class="product discounted" data-discount="10" data-stock="yes">
+            <h3>Headphones</h3>
+            <p>Price: ₹3000</p>
+            <p class="details">Wireless noise-cancelling headphones.</p>
+            <button class="favorite">♥ Favorite</button>
+        </div>
+
+        <div class="product" data-stock="yes">
+            <h3>Keyboard</h3>
+            <p>Price: ₹1500</p>
+            <p class="details">Mechanical gaming keyboard.</p>
+            <button class="favorite">♥ Favorite</button>
+        </div>
+
+        <div class="product" data-stock="yes">
+            <h3>Mouse</h3>
+            <p>Price: ₹800</p>
+            <p class="details">Comfortable wireless mouse.</p>
+            <button class="favorite">♥ Favorite</button>
+        </div>
+    </main>
+
+    <script src="Q2.js"></script>
+</body>
+</html>

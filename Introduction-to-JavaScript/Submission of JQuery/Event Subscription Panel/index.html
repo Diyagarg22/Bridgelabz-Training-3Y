@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription Panel</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .topic {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid gray;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Event Subscription Panel</h1>
+    </header>
+
+    <main>
+        <section id="topics">
+            <div class="topic">
+                <span>Technology</span>
+                <button class="subscribe">Subscribe</button>
+                <button class="unsubscribe">Unsubscribe</button>
+                <button class="remove">Remove</button>
+            </div>
+
+            <div class="topic">
+                <span>Education</span>
+                <button class="subscribe">Subscribe</button>
+                <button class="unsubscribe">Unsubscribe</button>
+                <button class="remove">Remove</button>
+            </div>
+
+            <div class="topic">
+                <span>Sports</span>
+                <button class="subscribe">Subscribe</button>
+                <button class="unsubscribe">Unsubscribe</button>
+                <button class="remove">Remove</button>
+            </div>
+
+            <div class="topic">
+                <span>Business</span>
+                <button class="subscribe">Subscribe</button>
+                <button class="unsubscribe">Unsubscribe</button>
+                <button class="remove">Remove</button>
+            </div>
+
+            <div class="topic">
+                <span>Science</span>
+                <button class="subscribe">Subscribe</button>
+                <button class="unsubscribe">Unsubscribe</button>
+                <button class="remove">Remove</button>
+            </div>
+        </section>
+
+        <input type="text" id="newTopic" placeholder="Enter new topic">
+        <button id="addTopic">Add Topic</button>
+
+        <p id="message" aria-live="polite"></p>
+    </main>
+
+    <script src="Q6.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive FAQ</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .answer {
+            display: none;
+            padding: 10px;
+            background: #f2f2f2;
+        }
+
+        .question {
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .active {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <main>
+        <section>
+            <h3 class="question">1. What is HTML?</h3>
+            <div class="answer">
+                <p>HTML is used to create the structure of web pages.</p>
+                <input type="text" placeholder="Write your feedback">
+            </div>
+
+            <h3 class="question">2. What is CSS?</h3>
+            <div class="answer">
+                <p>CSS is used to style web pages.</p>
+                <input type="text" placeholder="Write your feedback">
+            </div>
+
+            <h3 class="question">3. What is JavaScript?</h3>
+            <div class="answer">
+                <p>JavaScript makes web pages interactive.</p>
+                <input type="text" placeholder="Write your feedback">
+            </div>
+
+            <h3 class="question">4. What is jQuery?</h3>
+            <div class="answer">
+                <p>jQuery is a JavaScript library.</p>
+                <input type="text" placeholder="Write your feedback">
+            </div>
+
+            <h3 class="question">5. What is React?</h3>
+            <div class="answer">
+                <p>React is a JavaScript library for building user interfaces.</p>
+                <input type="text" placeholder="Write your feedback">
+            </div>
+        </section>
+    </main>
+
+    <script src="Q3.js"></script>
+</body>
+</html>
